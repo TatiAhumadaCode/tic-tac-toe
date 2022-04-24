@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'Mocha-Cookies';
-    src: url(/font/MochaCookies.otf);
+    src: url(font/MochaCookies.otf),
+         url(font/MochaCookies.ttf);
 }
 
 :root {
