@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'Mocha-Cookies';
+    src: url(/font/MochaCookies.otf);
+}
+
+:root {
+    --borders: #262525;
+    --background: #f4e9f7;
+
+}
+
+*,
+*::after
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mocha-Cookies';
+    background-color: var(--background);
+}
+
+header h1 {
+    text-align: center;
+    font-size: 45px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    justify-content: center;
+}
+
+.squads {
+    border-bottom: 5px solid var(--borders);
+    border-right: 5px solid var(--borders);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+/* Delete bottom and right's borders */
+
+.squads[data-id="2"],
+.squads[data-id="5"],
+.squads[data-id="8"] {
+    border-right: none;
+}
+
+.squads[data-id="6"],
+.squads[data-id="7"],
+.squads[data-id="8"] {
+    border-bottom: none;
+}
+
+/* set container's info-text */
+
+.info-box {
+    display: grid;
+    grid-template-columns: repeat(1, 3fr);
+    grid-template-rows: repeat(2, 60px);
+    align-items: center;
+    justify-items: center;
+}
+
+.info-box p {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    font-size: 30px;
+}
+
+.resetBtn {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    border: 3px solid var(--borders);
+    border-radius: 5px;
+    background-color: var(--borders);
+    color: var(--background);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+i {
+    font-size: 20px;
+}
